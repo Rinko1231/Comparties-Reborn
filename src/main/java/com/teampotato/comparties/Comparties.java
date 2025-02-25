@@ -1,6 +1,7 @@
 package com.teampotato.comparties;
 
-import deathtags.api.relation.EnumRelation;
+
+import dev.matthe815.mmoparties.forge.api.relation.EnumRelation;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(Comparties.ID)

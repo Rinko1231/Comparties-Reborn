@@ -4,8 +4,8 @@ license="LGPL-v3"
 
 [[mods]]
 modId="comparties"
-version="${file.jarVersion}"
-displayName="Comparties"
+version="1.20.1-0.03"
+displayName="Comparties Reborn"
 authors="Team Potato"
 description='''
 

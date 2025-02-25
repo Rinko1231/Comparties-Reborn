@@ -1,6 +1,6 @@
 package com.teampotato.comparties.mixin;
 
-import deathtags.api.PartyHelper;
+import dev.matthe815.mmoparties.forge.api.PartyHelper;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AreaEffectCloud;
@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
@@ -33,7 +34,8 @@ public abstract class MixinPlayer extends LivingEntity {
             if (
                     (directSourceEntity instanceof ServerPlayer sourcePlayer && PartyHelper.Server.GetRelation(targetPlayer, sourcePlayer) == PARTY) ||
                     (directSourceEntity instanceof ThrownPotion sourcePotion && sourcePotion.getOwner() instanceof ServerPlayer ownerPlayer && PartyHelper.Server.GetRelation(targetPlayer, ownerPlayer) == PARTY) ||
-                    (directSourceEntity instanceof AreaEffectCloud sourceCloud && sourceCloud.getOwner() instanceof ServerPlayer cloudOwner && PartyHelper.Server.GetRelation(targetPlayer, cloudOwner) == PARTY)
+                    (directSourceEntity instanceof Projectile projectile && projectile.getOwner() instanceof ServerPlayer projectileOwner && PartyHelper.Server.GetRelation(targetPlayer, projectileOwner) == PARTY) ||
+                     (directSourceEntity instanceof AreaEffectCloud sourceCloud && sourceCloud.getOwner() instanceof ServerPlayer cloudOwner && PartyHelper.Server.GetRelation(targetPlayer, cloudOwner) == PARTY)
             ) {
                 cir.setReturnValue(false);
                 cir.cancel();
