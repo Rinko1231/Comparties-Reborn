@@ -4,9 +4,9 @@ license="LGPL-v3"
 
 [[mods]]
 modId="comparties"
-version="1.20.1-0.03"
+version="1.20.1-0.0.3"
 displayName="Comparties Reborn"
 authors="Team Potato"
 description='''
-
+Enhance RPG Parties with additional protection features and improved compatibility with Iron's Spells 'n Spellbooks!
 '''

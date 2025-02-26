@@ -4,13 +4,15 @@
   "package": "com.teampotato.comparties.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "comparties.refmap.json",
+  "plugin": "com.teampotato.comparties.mixin.CompartiesMixinPlugin",
   "injectors": {
     "defaultRequire": 1
   },
   "mixins": [
-    "MixinDamageSources",
     "MixinEventCommon",
-    "MixinLivingEntity",
-    "MixinPlayer"
+    "nomagic.MixinLivingEntity",
+    "MixinPlayer",
+    "iss.MixinDamageSources",
+    "iss.MixinLivingEntityISS"
   ]
 }

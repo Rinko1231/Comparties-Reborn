@@ -8,4 +8,6 @@ import net.minecraftforge.fml.common.Mod;
 public class Comparties {
     public static final String ID = "comparties";
     public static final EnumRelation PARTY = EnumRelation.PARTY;
+
+
 }
